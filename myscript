@@ -1,4 +1,13 @@
 #!/bin/bash
-pwd
-whoami
+file="list.txt"
+path=$(ls -F | grep -v /)
+for var in $path
+do
+if !(grep -q "$var" $file)
+then
+echo "$var"
+fi
+done
+
+
 
