@@ -3,11 +3,8 @@ files="list.txt"
 directory=$(ls | grep -v /)
 for searched in $directory
 do
-if !(grep -q $searched $files)
+if !(grep -q $searched list.txt)
 then
 echo $searched
 fi
 done
-
-
-
