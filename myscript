@@ -1,11 +1,11 @@
 #!/bin/bash
-file="list.txt"
-path=$(ls -F | grep -v /)
-for var in $path
+files="list.txt"
+directory=$(ls | grep -v /)
+for searched in $directory
 do
-if !(grep -q "$var" $file)
+if !(grep -q $searched $files)
 then
-echo "$var"
+echo $searched
 fi
 done
 
