@@ -1,5 +1,4 @@
 #!/bin/bash
-files="list.txt"
 directory=$(ls | grep -v /)
 for searched in $directory
 do
